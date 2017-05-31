@@ -1,28 +1,78 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+  <div id="app" class="container">
+    <div class="row">
+      <party-list v-bind:fighters="fighters"></party-list>
+      <npc-list v-bind:fighters="fighters"></npc-list>
+    </div>
+
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import PartyList from './components/PartyList';
+import NpcList from './components/NpcList';
 
 export default {
   name: 'app',
   components: {
-    Hello
+    PartyList,
+    NpcList
+  },
+  data () {
+    return {
+      fighters: [{
+        name: 'Park',
+        joinBattle: 1,
+        isPC: true,
+        inCombat: false,
+        dvMod: 0,
+        key: 0
+      },
+      {
+        name: 'Sabine',
+        joinBattle: 2,
+        isPC: true,
+        inCombat: false,
+        dvMod: 0,
+        key: 1
+      },
+      {
+        name: 'Cole',
+        joinBattle: 3,
+        isPC: true,
+        inCombat: false,
+        dvMod: 0,
+        key: 2
+      },
+      {
+        name: 'Guy',
+        joinBattle: 4,
+        isPC: true,
+        inCombat: false,
+        dvMod: 0,
+        key: 3
+      },
+      {
+        name: 'Rune',
+        joinBattle: 5,
+        isPC: true,
+        inCombat: false,
+        dvMod: 0,
+        key: 4
+      },
+      {
+        name: 'Mook',
+        joinBattle: 1,
+        isPC: false,
+        inCombat: false,
+        dvMod: 0,
+        key: 5
+      }]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
