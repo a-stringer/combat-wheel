@@ -1,22 +1,16 @@
 <template>
   <div id="app" class="container">
-    <div class="row">
-      <party-list v-bind:fighters="fighters"></party-list>
-      <npc-list v-bind:fighters="fighters"></npc-list>
-    </div>
-
+    <fighters v-bind:fighters="fighters"></fighters>
   </div>
 </template>
 
 <script>
-import PartyList from './components/PartyList';
-import NpcList from './components/NpcList';
+import Fighters from './components/Fighters';
 
 export default {
   name: 'app',
   components: {
-    PartyList,
-    NpcList
+    Fighters
   },
   data () {
     return {
