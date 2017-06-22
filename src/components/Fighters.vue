@@ -9,7 +9,7 @@
       <fighter v-for="fighter in fighters" v-bind:fighter="fighter" v-if="!fighter.isPC&&!fighter.inCombat" v-on:join-combat="joinCombat"></fighter>
     </div>
     <div class="col-xs-2">
-      <h2>In Combat</h2>
+      <h2>Stuff</h2>
       <fighter v-for="fighter in fighters" v-bind:fighter="fighter" v-if="fighter.inCombat" v-on:leave-combat="leaveCombat"></fighter>
     </div>
   </div>
